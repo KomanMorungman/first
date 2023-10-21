@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        My First Web Page
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <style>
+        .gradient {
+            height: 80vh;
+            width: 80vw;
+            background-image: linear-gradient(to left, #0E50A7, #0B82AD, #0E50A7);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="t1">
+    <button id="b1">Submit</button>
+    <div id="div1"></div>
+    <button id="b2">Cick me</button>
+    <div id="div2"></div>
+    <button id="b3">Audio</button>
+    <div class="gradient"></div>
+    <script>
+
+
+        let but1, text1 = document.getElementById("t1");;
+        but1 = document.getElementById("b1");
+        but1.onclick = function () {
+            div1 = document.getElementById("div1");
+            child = document.createElement("p");
+            node = document.createTextNode(text1.value);
+            child.appendChild(node);
+            div1.appendChild(child);
+
+        }
+
+        btn2 = document.getElementById("b2");
+        function display() {
+            div2 = document.getElementById("div2");
+            child1 = document.createElement("p");
+
+            node1 = document.createTextNode("length:" + text1.value.length);
+            child1.appendChild(node1);
+            div2.appendChild(child1);
+
+        }
+
+        btn2.onclick = display;
+        let btn3 = document.getElementById("b3");
+        btn3.addEventListener("click", function (Event) {
+            audio = new Audio('mixkit-clear-mouse-clicks-2997.wav');
+            audio.play();
+        })
+    </script>
+
+
+
+</body>
+
+</html>
